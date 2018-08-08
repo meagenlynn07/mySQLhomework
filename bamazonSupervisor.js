@@ -37,8 +37,8 @@ function start(){
     //prints the items for sale and their details
     connection.query("SELECT * FROM products", function(err, res) {
 
-    var TotalSales =     
-        for (var i = 0; i < res.length; i++) {
+      
+        for(var i = 0; i < res.length; i++) {
             console.log("Department ID: " + res[i].department_id + " | " + "Department Name: " + res[i].department_name + " | " + "Over Head Cost: " + (res[i].over_head_costs).toFixed(2) + " | " + "Product Sales: " + (res[i].TotalSales).toFixed(2) + " | " + "Total Profit: " + (res[i].TotalSales - res[i].over_head_costs).toFixed(2));
         }
     });
